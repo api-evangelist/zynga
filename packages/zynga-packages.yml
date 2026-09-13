@@ -1,0 +1,43 @@
+generated: '2026-09-13'
+method: searched
+source: 'registry sweeps of npm, PyPI, Maven Central, NuGet and the github.com/zynga
+  organization'
+package_count: 0
+official_package_count: 0
+packages: []
+note: 'Zynga publishes no first-party client library to any package registry. The
+  npm scope @zynga is empty (search total 0), Maven Central group com.zynga returns
+  0 artifacts, PyPI has no rl-bakery / rl_bakery release despite the repo existing
+  on GitHub, and the only NuGet hit (Retyped.zynga-scroller) is a third-party typings
+  republish. Every npm package matching "zynga" is a community fork or re-publish
+  of the archived zynga/scroller JavaScript widget, not a Zynga-authored release.
+  This is consistent with the rest of the profile: Zynga operates no public API, so
+  there is nothing for an SDK to wrap. No SDKs pointer is emitted.'
+registries_checked:
+- registry: npm
+  query: scope:zynga
+  endpoint: https://registry.npmjs.org/-/v1/search?text=scope:zynga
+  result: 0 packages
+- registry: npm
+  query: zynga
+  endpoint: https://registry.npmjs.org/-/v1/search?text=zynga
+  result: 25 packages, all third-party forks/typings of the archived zynga/scroller
+- registry: pypi
+  query: rl-bakery, rl_bakery, jasy
+  result: 'rl-bakery 404; rl_bakery 404; jasy 1.1.1 (2013-08-15) is published by
+    Sebastian Software, not Zynga'
+- registry: maven-central
+  query: g:com.zynga
+  endpoint: https://search.maven.org/solrsearch/select?q=g:com.zynga
+  result: 0 artifacts
+- registry: nuget
+  query: Zynga
+  result: 1 hit, Retyped.zynga-scroller 0.1.6556 (third party)
+github_org:
+  url: https://github.com/zynga
+  public_repos: 23
+  active_repos: 4
+  note: 'Of 23 public repositories, 19 are archived and most carry a [DEPRECATED]
+    title. The four still receiving pushes (rl-bakery, BossAlienMediaPlayer,
+    ssh-cmd-proxy, zynga-hhvm-phpunit) are internal engineering tools, not API client
+    libraries, and none is distributed through a package registry.'

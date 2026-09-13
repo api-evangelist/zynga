@@ -1,20 +1,83 @@
 aid: zynga
 name: Zynga
-description: 'Zynga is a company surfaced via the API Evangelist harvest backlog (source: absent-parent)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Zynga is a mobile and social game developer and publisher, founded in
+  2007 in San Francisco and a wholly owned subsidiary of Take-Two Interactive since
+  May 2022. It operates a portfolio of free-to-play franchises including FarmVille,
+  Zynga Poker, Words With Friends, CSR Racing, Empires & Puzzles, Toon Blast, Merge
+  Dragons, Harry Potter: Puzzles & Spells, Top Eleven and Golf Rival, built across
+  studios such as NaturalMotion, Peak, Rollic, Socialpoint, Small Giant Games, Gram
+  Games, Nordeus and StarLark. Zynga publishes a corporate website, an engineering
+  blog, a player support center and a responsible disclosure program, but as of September
+  2026 it operates no public developer program: there is no developer portal, no API
+  reference, and no machine-readable contract on any Zynga-controlled host. The third-party
+  "Zynga API" announced at Zynga Unleashed in 2011-2012 was retired with the zynga.com
+  third-party publishing platform, and developers.zynga.com no longer resolves.'
+image: https://www.zynga.com/storage/2018/09/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/zynga/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:absent-parent
-x-tier: stub
-x-tier-reason: harvest
+x-parent-company: take-two-interactive
 specificationVersion: '0.20'
 created: '2026-09-13'
 modified: '2026-09-13'
 tags:
 - Company
+- Gaming
+- Video Games
+- Mobile Games
+- Social Games
+- Entertainment
+- Game Development
+- Free-to-Play
+- Consumer
 apis: []
+common:
+- type: VulnerabilityDisclosure
+  url: security/zynga-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/zynga-domain-security.yml
+- type: Website
+  url: https://www.zynga.com/
+- type: Blog
+  url: https://www.zynga.com/blog/
+- type: Support
+  url: https://www.zynga.com/support/
+- type: GitHubOrganization
+  url: https://github.com/zynga
+- type: TermsOfService
+  url: https://www.take2games.com/legal/en-US/
+- type: PrivacyPolicy
+  url: https://www.take2games.com/privacy/en-US/
+- type: Security
+  url: https://www.zynga.com/security/rdp
+- type: LLMsTxt
+  url: llms/zynga-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-09-13'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Zynga ships games as end-user products only; developers.zynga.com has no
+    address records, www.zynga.com/developers is a 404 and the live api.zynga.com
+    is an internal game-client router that answers every path with HTTP 400 "Failed
+    to extract service name" under a robots.txt Disallow.
+  evidence:
+  - url: https://www.zynga.com/developers
+    status: 404
+  - url: https://api.zynga.com/openapi.json
+    status: 400
+  - url: https://api.zynga.com/robots.txt
+    status: 200
+  - url: https://www.zynga.com/llms.txt
+    status: 404
+  - url: https://www.zynga.com/.well-known/agent-card.json
+    status: 403
+  checked: '2026-09-13'

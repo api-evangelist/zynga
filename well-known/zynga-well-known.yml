@@ -1,0 +1,98 @@
+generated: '2026-09-13'
+method: probed
+source: live HTTPS probes of every Zynga-controlled host known to this record
+note: 'Probe record of an ABSENCE. No /.well-known/ document was served by any Zynga
+  host. www.zynga.com and zynga.com answer 403 for the entire /.well-known/ prefix
+  (an edge policy, not a document), api.zynga.com answers 400 with error-category
+  pbr.request.malformed on every path, and support.zynga.com / code.zynga.com are
+  301 aliases onto www.zynga.com paths. No WellKnown, SecurityTxt, APICatalog or
+  AgentCard pointer is emitted, because none of these documents is served.'
+hosts:
+- host: www.zynga.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
+- host: zynga.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+- host: api.zynga.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 400
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    file: null
+  - path: /.well-known/api-catalog
+    status: 400
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 400
+    file: null
+  - path: /.well-known/agent.json
+    status: 400
+    file: null
+  - path: /robots.txt
+    status: 200
+    file: null
+- host: support.zynga.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
+- host: code.zynga.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
