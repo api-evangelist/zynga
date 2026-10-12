@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "zynga",
+    "captured_at": "2026-10-11T195551",
+    "source_url": "https://www.zynga.com/",
+    "source_type": "Website",
+    "file": "zynga-2026-10-11T195551.png",
+    "bytes": 998288,
+    "capture": "playwright-local"
+  }
+]
